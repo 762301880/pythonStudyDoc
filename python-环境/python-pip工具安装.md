@@ -27,26 +27,6 @@
 pip --version
 ```
 
-## 2.2 命令下载django（默认下载的是最新版本的）
-
-```shell
-pip install django
-```
-
-## 2.3安装成功后如何创建djago项目
-
-- cd 进入你放置django项目的目录输入一下命令
-
-```shell
-django-admin startproject 你的项目名称
-```
-
-- ps:如果有不理解的地方可以看一下官方手册（链接如下）
-
-```apl
-https://docs.djangoproject.com/zh-hans/2.1/intro/tutorial01/
-```
-
 # 三、切换镜像源(阿里云镜像)
 
 > 1.pip是一个python的管理工具pip 是 Python 包管理工具，该工具提供了对Python 包的查找、下载、安装、卸载的功能。
