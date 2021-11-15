@@ -32,19 +32,28 @@ curl -o Python-3.9.8.tgz   https://npm.taobao.org/mirrors/python/3.9.8/Python-3.
 # 为了方便
 ```
 
-- 安装
+- [安装](https://www.cnblogs.com/smilevv/p/14134901.html)
 
 ```shell
 tar -zxvf Python-3.9.8.tgz
 cd Python-3.9.8
-./configure 
-make && make install
+./configure   --prefix=/usr/local/python3.9
+make && sudo make install
 ```
 
 查看是否安装成功
 
 ```shell
 php --version
+# 如果没有指定目录的时候 默认安装目录
+[root@iZuf69knglysgxpotcmkn1Z python3.9]# pwd
+/usr/local/lib/python3.9
+# 全局使用python3命令
+[root@iZuf69knglysgxpotcmkn1Z]# python3 --version      
+Python 3.9.8
+# 查看pip 
+[root@101fe8e80378 /]# pip3 --version
+pip 21.2.4 from /usr/local/lib/python3.9/site-packages/pip (python 3.9)
 ```
 
 
