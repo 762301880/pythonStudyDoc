@@ -13,20 +13,49 @@
 
 <img src="https://i.loli.net/2021/11/15/bw58NDtmzaZyKVj.png" alt="1636944911(1).jpg" style="zoom:50%;" />
 
-- 下载
+推荐[淘宝镜像npm](https://npm.taobao.org/mirrors)下载 
 
 ```shell
-# wget 下载
-wget https://www.python.org/ftp/python/3.9.8/Python-3.9.8.tgz
-# curl 下载
-curl -o Python-3.9.8.tgz   https://www.python.org/ftp/python/3.9.8/Python-3.9.8.tgz 
+# 地址
+https://npm.taobao.org/mirrors/python/
 ```
 
 
 
+- 下载
+
+```shell
+# wget 下载
+wget https://npm.taobao.org/mirrors/python/3.9.8/Python-3.9.8.tgz
+# curl 下载
+curl -o Python-3.9.8.tgz   https://npm.taobao.org/mirrors/python/3.9.8/Python-3.9.8.tgz
+# 为了方便
+```
+
+- 安装
+
+```shell
+tar -zxvf Python-3.9.8.tgz
+cd Python-3.9.8
+./configure 
+make && make install
+```
+
+查看是否安装成功
+
+```shell
+php --version
+```
+
 
 
 ## 卸载
+
+**编译安装卸载**
+
+```shell
+sudo rm -rf  /usr/local/python
+```
 
 **卸载centos自带python**
 
@@ -80,6 +109,12 @@ curl -o Python-3.9.8.tgz   https://www.python.org/ftp/python/3.9.8/Python-3.9.8.
 | ---------------------- | ------------------------------------------------------------ |
 | 菜鸟教程pip讲解        | [点击跳转](https://www.runoob.com/w3cnote/python-pip-install-usage.html) |
 | 菜鸟教程-pip安装-linux | [点击跳转](Python pip 安装与使用)                            |
+
+## 安装
+
+### linux安装
+
+
 
 ## 切换镜像源
 
