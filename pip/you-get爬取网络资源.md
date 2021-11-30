@@ -56,6 +56,9 @@ Type:       MPEG-4 video (video/mp4)
 Size:       59.91 MiB (62822461 Bytes)
 Downloading SNH48《Honor》官方MV.mp4 ...
  100% ( 59.9/ 59.9MB) ├████████████████████████████████████████┤[1/1]    5 MB/s
+    
+# 实际玩法 二维码视频无法打开
+# 先草料二维码解析  https://cli.im/deqr 成网址  然后再直接  you-get + j
 ```
 
 **代码中使用you-get**
