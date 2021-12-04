@@ -195,3 +195,34 @@ index-url = https://mirrors.aliyun.com/pypi/simple/
 trusted-host=mirrors.aliyun.com
 ```
 
+### pip 工具的简单使用
+
+**查看已经安装的包**
+
+> `pip list` 命令列出已经安装的包
+
+```python
+yaoliuyang@yaoliuyang-PC:~$ pip list
+Package    Version
+---------- -------
+distro     1.3.0
+onboard    1.4.1
+pexpect    4.6.0
+Pillow     5.4.1
+pip        21.3.1
+pycairo    1.16.2
+PyGObject  3.30.4
+pywifi     1.1.12
+reportlab  3.5.13
+setuptools 59.4.0
+wheel      0.37.0
+```
+
+**卸载已经安装的软件包**
+
+> `pip uninstall + 包名`
+
+```python
+pip uninstall pywifi
+```
+
