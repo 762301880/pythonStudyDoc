@@ -117,11 +117,32 @@ sudo rm -rf  /usr/local/python
 | 名称                   | 地址                                                         |
 | ---------------------- | ------------------------------------------------------------ |
 | 菜鸟教程pip讲解        | [点击跳转](https://www.runoob.com/w3cnote/python-pip-install-usage.html) |
-| 菜鸟教程-pip安装-linux | [点击跳转](Python pip 安装与使用)                            |
+| 菜鸟教程-pip安装-linux | [点击跳转](https://www.runoob.com/w3cnote/python-pip-install-usage.html)   [点击跳转](https://www.runoob.com/w3cnote/python-pip-install-usage.html) |
 
 ## 安装
 
 ### linux安装
+
+```shell
+# 先查看pip是否存在
+pip  --version
+pip3 --version
+# 如果你还未安装，则可以使用以下方法来安装 
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py   # 下载安装脚本
+sudo python get-pip.py    # 运行安装脚本
+```
+
+****
+
+*用哪个版本的 Python 运行安装脚本，pip 就被关联到哪个版本，如果是 Python3 则执行以下命令：*
+
+```shell
+sudo python3 get-pip.py    # 运行安装脚本。	
+
+#一般情况 pip 对应的是 Python 2.7，pip3 对应的是 Python 3.x。
+```
+
+
 
 
 
