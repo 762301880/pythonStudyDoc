@@ -176,3 +176,22 @@ ps:然后保存即可，如果电脑不让你保存说你权限不够的话你�
 - 效果如图所示
 
  ![如图所示](https://yaoliuyang-blog-images.oss-cn-beijing.aliyuncs.com/blogImages/ASjshfNGHY26g3P.jpg)
+
+### [linux切换镜像源](https://developer.aliyun.com/mirror/pypi)
+
+> 首先在用户目录下建立文件
+>
+> .pip 就是可隐藏文件  可以 ls -a命令显示出来
+
+```shell
+sudo mkdir ~/.pip && sudo  touch ~/.pip/pip.conf  # 建立 pip.conf文件
+sudo chmod -R 777 pip.conf  # 设置可以编辑权限
+vim pip.conf  # 编辑
+# 文件中添加以下即可
+[global]
+index-url = https://mirrors.aliyun.com/pypi/simple/
+
+[install]
+trusted-host=mirrors.aliyun.com
+```
+
