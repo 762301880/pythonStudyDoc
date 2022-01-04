@@ -44,7 +44,7 @@ make && sudo make install
 查看是否安装成功
 
 ```shell
-php --version
+pip --version
 # 如果没有指定目录的时候 默认安装目录
 [root@iZuf69knglysgxpotcmkn1Z python3.9]# pwd
 /usr/local/lib/python3.9
