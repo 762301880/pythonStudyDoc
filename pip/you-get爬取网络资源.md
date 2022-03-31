@@ -11,6 +11,7 @@
 
 | 名称                 | 地址                                                         |
 | -------------------- | ------------------------------------------------------------ |
+| github  you-get 地址 | [link](https://github.com/soimort/you-get)                   |
 | you-get(pip官网地址) | [link](https://pypi.org/project/you-get/)                    |
 | 第三方博客参考       | [link](https://blog.csdn.net/ayouleyang/article/details/104090366) |
 
@@ -32,6 +33,45 @@ A tiny downloader that scrapes the web
 ```
 
 ##  使用
+
+**基本命令**
+
+```shell
+# 零  
+you-get -h  # 查看帮助信息显示命令
+# 一
+you-get -i  视频地址  # 查看视频的详细信息
+
+$ you-get -i https://www.bilibili.com/video/BV177411U72d?spm_id_from=333.999.0.0
+
+site:                Bilibili
+title:               迪丽热巴狐妖
+streams:             # Available quality and codecs
+    [ DASH ] ____________________________________
+    - format:        dash-flv360  # 视频格式
+      container:     mp4
+      quality:       流畅 360P
+      size:          4.7 MiB (4882115 bytes)
+    # download-with: you-get --format=dash-flv360 [URL]
+
+    [ DEFAULT ] _________________________________  # 默认下载的视频格式地址
+    - format:        flv360
+      container:     flv
+      quality:       流畅 360P
+      size:          4.7 MiB (4917706 bytes)
+    # download-with: you-get --format=flv360 [URL]
+    
+# 二   
+you-get -o  视频地址  #指定下载的地址
+
+# 三
+you-get -F 视频格式  视频地址 
+
+$ you-get -F dash-flv360 https://www.bilibili.com/video/BV177411U72d?spm_id_from=333.999.0.0 # 下载 mp4格式视频地址
+
+```
+
+
 
 **cmd命令使用**
 
@@ -58,7 +98,7 @@ Downloading SNH48《Honor》官方MV.mp4 ...
  100% ( 59.9/ 59.9MB) ├████████████████████████████████████████┤[1/1]    5 MB/s
     
 # 实际玩法 二维码视频无法打开
-# 先草料二维码解析  https://cli.im/deqr 成网址  然后再直接  you-get + j
+# 先草料二维码解析  https://cli.im/deqr 成网址  然后再直接  you-get + 解析的地址
 ```
 
 **代码中使用you-get**
