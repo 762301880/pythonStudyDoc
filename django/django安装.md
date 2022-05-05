@@ -15,17 +15,29 @@
 
 # 二、安装`django`
 
+**安装资料**
+
+| 名称         | 地址                                                         |
+| ------------ | ------------------------------------------------------------ |
+| 官方安装参考 | [link](https://docs.djangoproject.com/zh-hans/4.0/howto/windows/) |
+
+
+
 ## 2.1 命令下载django（默认下载的是最新版本的）
 
-```shell
-pip install django
+> 安装完成之后会在python安装目录例如**D:\Program Files\python\Scripts**中找到**django-admin.exe** 命令我们可以终端使用**Django**命令
+
+```python
+pip install django 
+# 新版本安装命令
+py -m pip install Django
 ```
 
 ## 2.2 安装成功后如何创建djago项目
 
 - cd 进入你放置django项目的目录输入一下命令
 
-```shell
+```python
 django-admin startproject 你的项目名称=>例子：django-admin startproject HelloWorld
 ```
 
@@ -37,7 +49,7 @@ python -m django --version
 
 ## 2.4 创建完成后我们可以查看下项目的目录结构：
 
-```api
+```python
 $ cd HelloWorld/
 $ tree
 .
