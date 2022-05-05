@@ -8,10 +8,10 @@
 
 - 资料
 
-| 名称             | 地址                                                         |
-| ---------------- | ------------------------------------------------------------ |
-| 菜鸟教程`django` | [链接](https://www.runoob.com/django/django-tutorial.html)   |
-| 官方手册         | [链接](https://docs.djangoproject.com/zh-hans/2.1/intro/tutorial01/) |
+| 名称                  | 地址                                                         |
+| --------------------- | ------------------------------------------------------------ |
+| 菜鸟教程`django`      | [链接](https://www.runoob.com/django/django-tutorial.html)   |
+| 官方手册 Django中文网 | [链接](https://docs.djangoproject.com/zh-hans/2.1/intro/tutorial01/)  [链接](https://www.django.cn/) |
 
 # 二、安装`django`
 
