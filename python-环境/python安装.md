@@ -11,7 +11,7 @@
 
 **[官网下载](https://www.python.org/downloads/source/)**
 
-<img src="https://i.loli.net/2021/11/15/bw58NDtmzaZyKVj.png" alt="1636944911(1).jpg" style="zoom:50%;" />
+<img src="https://yaoliuyang-blog-images.oss-cn-beijing.aliyuncs.com/blogImages/bw58NDtmzaZyKVj.png" alt="1636944911(1).jpg" style="zoom:50%;" />
 
 推荐[淘宝镜像npm](https://npm.taobao.org/mirrors)下载 
 
