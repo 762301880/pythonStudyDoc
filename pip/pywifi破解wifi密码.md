@@ -37,7 +37,7 @@ print(iface)
 
 ## [ModuleNotFoundError: No module named 'comtypes'](https://jingyan.baidu.com/article/a17d528555e7a0c199c8f261.html)
 
-[![vXNb7V.md.png](https://s1.ax1x.com/2022/09/12/vXNb7V.md.png)](https://imgse.com/i/vXNb7V)
+[![vXNb7V.md.png](https://yaoliuyang-blog-images.oss-cn-beijing.aliyuncs.com/blogImages/vXNb7V.md.png)](https://imgse.com/i/vXNb7V)
 
 ```python
 "D:\Program Files\python\python.exe" C:/Users/铺先生技术研发中心/Desktop/demo.py
