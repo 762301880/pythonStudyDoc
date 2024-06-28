@@ -26,4 +26,4 @@ pip install requests
 | -------------- | ------------------------------------------------------------ |
 | 第三方博客参考 | [link](https://baijiahao.baidu.com/s?id=1712925128815842144&wfr=spider&for=pc) [link](https://www.zhihu.com/question/321312677) |
 
-![1651544649(1).jpg](https://yaoliuyang-blog-images.oss-cn-beijing.aliyuncs.com/blogImages/owmOGXYE2qURTjx.png)
+![1651544649(1).jpg](https://gitee.com/yaolliuyang/blogImages/raw/master/blogImages/owmOGXYE2qURTjx.png)

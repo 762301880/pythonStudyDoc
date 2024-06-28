@@ -11,7 +11,7 @@
 
 **[官网下载](https://www.python.org/downloads/source/)**
 
-<img src="https://yaoliuyang-blog-images.oss-cn-beijing.aliyuncs.com/blogImages/bw58NDtmzaZyKVj.png" alt="1636944911(1).jpg" style="zoom:50%;" />
+<img src="https://gitee.com/yaolliuyang/blogImages/raw/master/blogImages/bw58NDtmzaZyKVj.png" alt="1636944911(1).jpg" style="zoom:50%;" />
 
 推荐[淘宝镜像npm](https://npm.taobao.org/mirrors)下载 
 
@@ -84,23 +84,23 @@ sudo rm -rf  /usr/local/python
 
 >点击`Downloads`=>`Windows`
 
-<img src='https://yaoliuyang-blog-images.oss-cn-beijing.aliyuncs.com/blogImages/1922055-20201015113456373-96008708.png' width='600px' heigth='400px' title='官网'>
+<img src='https://gitee.com/yaolliuyang/blogImages/raw/master/blogImages/1922055-20201015113456373-96008708.png' width='600px' heigth='400px' title='官网'>
 
 >下载安装程序
 
-<img src='https://yaoliuyang-blog-images.oss-cn-beijing.aliyuncs.com/blogImages/1922055-20201015113829489-1600403853.png' width='600px' heigth='400px' title='下载程序'>
+<img src='https://gitee.com/yaolliuyang/blogImages/raw/master/blogImages/1922055-20201015113829489-1600403853.png' width='600px' heigth='400px' title='下载程序'>
 
 ## 安装
 
 `记得勾选` ==path==
 
-<img src='https://yaoliuyang-blog-images.oss-cn-beijing.aliyuncs.com/blogImages/1922055-20201015113910212-399442107.jpg' width='600px' heigth='400px' title='安装'>
+<img src='https://gitee.com/yaolliuyang/blogImages/raw/master/blogImages/1922055-20201015113910212-399442107.jpg' width='600px' heigth='400px' title='安装'>
 
 ## 测试
 
 >使用cmd输入`python`然后输出命令测试即可
 
-<img src='https://yaoliuyang-blog-images.oss-cn-beijing.aliyuncs.com/blogImages/1922055-20201015114052532-325243859.png' width='600px' heigth='400px' title='测试'>
+<img src='https://gitee.com/yaolliuyang/blogImages/raw/master/blogImages/1922055-20201015114052532-325243859.png' width='600px' heigth='400px' title='测试'>
 
 ## 更改镜像查看我的另一篇博客[pip切换阿里云镜像（国内镜像）](https://www.cnblogs.com/yaoliuyang/p/12505441.html)
 
@@ -160,7 +160,7 @@ sudo python3 get-pip.py    # 运行安装脚本。
 
 
 
-![img](https://yaoliuyang-blog-images.oss-cn-beijing.aliyuncs.com/blogImages/1922055-20200822155741995-69061909.jpg)
+![img](https://gitee.com/yaolliuyang/blogImages/raw/master/blogImages/1922055-20200822155741995-69061909.jpg)
 
 - 文件右键用记事本打开文件然后在文件中输入
 
@@ -175,7 +175,7 @@ ps:然后保存即可，如果电脑不让你保存说你权限不够的话你�
 
 - 效果如图所示
 
- ![如图所示](https://yaoliuyang-blog-images.oss-cn-beijing.aliyuncs.com/blogImages/ASjshfNGHY26g3P.jpg)
+ ![如图所示](https://gitee.com/yaolliuyang/blogImages/raw/master/blogImages/ASjshfNGHY26g3P.jpg)
 
 ### [linux切换镜像源](https://developer.aliyun.com/mirror/pypi)
 
