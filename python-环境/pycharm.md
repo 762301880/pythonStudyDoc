@@ -19,6 +19,18 @@
 **设置类自动导入**
 
 > File | Settings | Editor | General | Auto Import
+>
+> 在 PyCharm 中，确实可以实现自动导入（import）功能，这能帮助开发者提高编码效率。以下是几种实现自动导入的方法：
+> 自动提示导入：
+> 当你在代码中使用了一个未导入的模块或类时，PyCharm 会自动检测到这一点，并在该位置下方显示一个黄色灯泡图标。
+> 点击该图标，选择“Import this name”，PyCharm 将自动为你添加相应的导入语句。
+> 设置自动导入：
+> 你可以通过设置让 PyCharm 在输入时自动建议导入。进入 File -> Settings（或者 PyCharm -> Preferences 在 macOS 上）。
+> 导航到 Editor -> General -> Auto Import。
+> 在这里，你可以勾选“Add unambiguous imports on the fly”选项，这样 PyCharm 会在你输入时自动添加明确的导入语句。
+> 手动触发导入：
+> 如果你已经编写了一段代码并希望一次性解决所有未导入的问题，可以右键点击编辑器中的任意位置，然后选择 Optimize Imports。这将自动整理和添加所需的导入语句。
+> 这些功能使得在 PyCharm 中管理导入变得非常方便，有助于保持代码的整洁和可读性。
 
 ![image-20241007145902496](https://gitee.com/yaolliuyang/blogImages/raw/master/blogImages/image-20241007145902496.png)
 
