@@ -39,3 +39,27 @@
 > 是不是面临过经常换电脑得问题   换了ide之后又要重新配置一下 之前得配置很麻烦
 >
 > 我们将本地配置到云端之后只需要重新登录一下账号就可以找回之前得配置
+
+## 设置脚本用控制台执行
+
+> 在 PyCharm 中，默认情况下，运行 Python 脚本可能会使用 Python Console 来执行。如果你不希望使用 Python Console 执行脚本，可以进行以下设置：
+>
+> **修改运行配置：**
+>  打开你要运行的脚本。
+>  点击右上角的运行配置下拉菜单，选择 Edit Configurations。
+>  在弹出的窗口中，找到你当前的运行配置。
+>  取消勾选 Run with Python Console 选项。
+>
+> **创建新的运行配置：**
+>  如果你还没有为当前脚本创建运行配置，可以点击 + 按钮，选择 Python。
+>  在新创建的配置中，确保 Script path 正确指向你的脚本文件。
+>  同样取消勾选 Run with Python Console 选项。
+>
+> **保存并应用配置：**
+>  完成上述设置后，点击 Apply 按钮，然后点击 OK 保存配置。
+>
+> **运行脚本：**
+>  现在你可以通过点击运行按钮或使用快捷键来运行脚本，它将不再使用 Python Console。
+>  通过以上步骤，你可以确保在 PyCharm 中运行 Python 脚本时不会使用 Python Console。
+
+![image-20241025144945907](https://gitee.com/yaolliuyang/blogImages/raw/master/blogImages/image-20241025144945907.png)
