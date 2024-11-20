@@ -226,3 +226,42 @@ wheel      0.37.0
 pip uninstall pywifi
 ```
 
+# 疑问解答
+
+## 为什么 Linux 服务器上使用 Python 需要指定 python3，而 Windows 上不需要？
+
+1. 历史原因
+- Linux：许多 Linux 发行版默认安装了多个版本的 Python，包括 Python 2 和 Python 3。为了兼容旧的脚本和应用程序，python 命令通常指向 Python 2，而 python3 命令指向 Python 3。
+- Windows：Windows 系统默认不安装 Python，用户安装 Python 时可以选择安装 Python 3，并且安装程序通常会将 python 命令配置为指向 Python 3。
+2. 系统默认行为
+- Linux：在大多数 Linux 发行版中，python 命令默认指向 Python 2，而 python3 命令指向 Python 3。这是为了避免破坏依赖 Python 2 的系统工具和脚本。
+- Windows：Windows 没有预装 Python，用户安装 Python 3 后，python 命令会默认指向 Python 3，因为 Windows 上没有历史遗留的 Python 2 版本需要兼容。
+
+3. 环境配置
+Linux：可以通过修改环境变量或创建符号链接来改变 python 命令的行为。例如，可以创建一个符号链接：
+
+```sh
+  sudo ln -s /usr/bin/python3 /usr/bin/python
+```
+
+这样 python 命令就会指向 Python 3。
+
+- Windows：安装 Python 3 时，安装程序会自动将 python 命令配置为指向 Python 3。如果需要切换到 Python 2，可以通过修改系统环境变量来实现。
+
+4. 脚本兼容性
+
+  - Linux：为了确保脚本在不同环境中都能正确运行，建议在脚本的第一行明确指定解释器路径，例如：
+
+  ```shell
+    #!/usr/bin/env python3
+    ....
+  ```
+
+  这样即使在不同的系统中，脚本也能使用正确的 Python 版本。
+  Windows：Windows 上的脚本通常不使用 shebang 行，而是通过文件扩展名（如 .py）来确定解释器。因此，python 命令默认指向 Python 3 通常不会引起问题。
+
+  **总结**
+
+  - Linux：由于历史原因和系统默认行为，python 命令通常指向 Python 2，因此需要使用 python3 来明确指定 Python 3。
+  - Windows：由于 Windows 没有预装 Python，用户安装 Python 3 后，python 命令默认指向 Python 3，因此不需要特别指定。
+    通过了解这些差异，可以更好地在不同操作系统上管理和运行 Python 脚本。
