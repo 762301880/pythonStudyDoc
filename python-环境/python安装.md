@@ -265,3 +265,18 @@ Linux：可以通过修改环境变量或创建符号链接来改变 python 命�
   - Linux：由于历史原因和系统默认行为，python 命令通常指向 Python 2，因此需要使用 python3 来明确指定 Python 3。
   - Windows：由于 Windows 没有预装 Python，用户安装 Python 3 后，python 命令默认指向 Python 3，因此不需要特别指定。
     通过了解这些差异，可以更好地在不同操作系统上管理和运行 Python 脚本。
+
+##  linux 服务器上面想使用python 命令执行python3命令方案
+
+### **使用别名**
+
+> 你可以在 `.bashrc` 或 `.profile` 文件中添加别名：
+>
+> **注意:设置别名后记得重新登陆一下服务器使其生效**
+
+```shell
+alias python=python3
+```
+
+
+
