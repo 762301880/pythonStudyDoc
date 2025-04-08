@@ -195,6 +195,66 @@ index-url = https://mirrors.aliyun.com/pypi/simple/
 trusted-host=mirrors.aliyun.com
 ```
 
+**直接使用命令设置**
+
+- **`pip config set`**: 修改 pip 的配置。
+- **`global.index-url`**: 指定全局的 PyPI 镜像地址。
+- **`https://mirrors.aliyun.com/pypi/simple/`**: 阿里云提供的 PyPI 镜像地址（国内访问更快）
+
+```shell
+# pip config list
+pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/
+```
+
+**为什么需要这样设置？**
+
+1. **加速下载**：
+   - 默认的 PyPI 源（`https://pypi.org/simple/`）在国外，国内直接访问可能较慢或超时。
+   - 使用阿里云镜像可以显著提升下载速度。
+2. **解决网络问题**：
+   - 避免因网络不稳定导致的 `pip install` 失败（如超时、连接中断）。
+
+**生效范围**
+
+- **全局生效**：所有 Python 项目的 `pip install` 命令都会使用该镜像源。
+- **配置文件位置**：
+  修改后的配置会保存在 pip 的全局配置文件中（路径因系统而异）：
+  - Linux/macOS: `~/.config/pip/pip.conf`
+  - Windows: `%APPDATA%\pip\pip.ini`
+
+### **其他常用国内镜像源**
+
+如果阿里云镜像不稳定，可以替换为其他源：
+
+```shell
+# 清华大学源
+pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple/
+
+# 腾讯云源
+pip config set global.index-url https://mirrors.cloud.tencent.com/pypi/simple/
+
+# 豆瓣源
+pip config set global.index-url https://pypi.doubanio.com/simple/
+```
+
+### **如何恢复默认源？**
+
+> 或手动删除配置文件中的 `index-url` 行。
+
+```bash
+pip config unset global.index-url
+```
+
+输出示例：
+
+```shell
+global.index-url='https://mirrors.aliyun.com/pypi/simple/'
+```
+
+
+
+
+
 ### pip 工具的简单使用
 
 **查看已经安装的包**
