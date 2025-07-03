@@ -148,6 +148,16 @@ sudo python3 get-pip.py    # 运行安装脚本。
 
 ## 切换镜像源
 
+###   国内镜像源
+
+```bash
+清华大学：https://pypi.tuna.tsinghua.edu.cn/simple
+阿里云：https://mirrors.aliyun.com/pypi/simple/
+豆瓣：https://pypi.douban.com/simple/
+```
+
+
+
 ### windows切换镜像源(阿里云镜像)
 
 > 1.pip是一个python的管理工具pip 是 Python 包管理工具，该工具提供了对Python 包的查找、下载、安装、卸载的功能。
@@ -204,6 +214,8 @@ trusted-host=mirrors.aliyun.com
 ```shell
 # pip config list
 pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/
+
+pip install some-package -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
 **为什么需要这样设置？**
