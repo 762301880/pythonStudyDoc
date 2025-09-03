@@ -75,3 +75,120 @@ model = YOLO("runs/detect/train/weights/best.pt")
 img = "test.jpg"  # 测试图片路径
 results = model(img, show=True)  # show=True 会弹窗显示
 ```
+
+#  云训练模型
+
+## [Colab](https://colab.research.google.com/?utm_source=chatgpt.com#scrollTo=C1hZOXhYMH63)
+
+###    YOLOv8 Colab 训练（定期保存权重）
+
+```shell
+# =========================================================
+# 1. 安装 YOLOv8
+# =========================================================
+!pip install ultralytics
+
+# =========================================================
+# 2. 导入库
+# =========================================================
+from ultralytics import YOLO
+from google.colab import files
+import os, shutil
+
+# =========================================================
+# 3. 上传并自动解压数据集
+# =========================================================
+uploaded = files.upload()
+zip_name = list(uploaded.keys())[0]
+
+!rm -rf datasets/mydata
+!mkdir -p datasets/mydata
+!unzip -q "$zip_name" -d datasets/mydata
+
+# =========================================================
+# 4. 自动查找 dataset.yaml
+# =========================================================
+yaml_path = ""
+for root, dirs, files_list in os.walk("datasets/mydata"):
+    for f in files_list:
+        if f.endswith(".yaml"):
+            yaml_path = os.path.join(root, f)
+            break
+if yaml_path == "":
+    raise FileNotFoundError("❌ 没找到 dataset.yaml，请检查数据集结构！")
+print("✅ 找到数据集配置文件:", yaml_path)
+
+# =========================================================
+# 5. 开始训练（每隔5个epoch保存一次）
+# ---------------------------------------------------------
+# save_period=5 表示每 5 epoch 保存一次权重
+# =========================================================
+model = YOLO("yolov8n.pt")
+model.train(
+    data=yaml_path,
+    epochs=50,
+    imgsz=640,
+    batch=16,
+    save_period=5   # ✅ 新增参数：每5个epoch保存一次
+)
+
+# =========================================================
+# 6. 下载最后的best.pt（你也可以手动下 5,10,15,...pt）
+# =========================================================
+best_model_path = "runs/detect/train/weights/best.pt"
+files.download(best_model_path)
+```
+
+### 📂 保存结果
+
+运行完后，在 Colab 的目录里会有：
+
+```
+runs/detect/train/weights/
+ ├── best.pt         # 最优模型
+ ├── last.pt         # 最后一轮模型
+ ├── epoch5.pt
+ ├── epoch10.pt
+ ├── epoch15.pt
+ └── ...
+```
+
+你可以提前下载 `epoch5.pt`、`epoch10.pt` 来测试，避免等太久。
+
+### YOLOv8 支持 **断点续训**（继续训练）
+
+只要你用之前的权重文件（`best.pt` / `last.pt` / `epochXX.pt`）作为起点，就能接着往下训练。
+
+🔑 原理
+
+- 如果你不指定 `weights`，默认会从头用 `yolov8n.pt` 预训练权重开始。
+- 如果你指定 `weights="runs/detect/train/weights/last.pt"`，它会继续在上次的参数基础上训练。
+
+ 续训方法（Colab 示例）
+
+```shell
+from ultralytics import YOLO
+
+# 加载上次的训练权重（例如 last.pt 或 best.pt）
+model = YOLO("runs/detect/train/weights/last.pt")
+
+# 继续训练 20 个 epoch
+model.train(
+    data="datasets/mydata/dataset.yaml",
+    epochs=20,
+    imgsz=640,
+    batch=16,
+    resume=True   # ✅ 关键参数：表示续训，而不是从头
+)
+```
+
+`resume=True`：表示在 **保留优化器参数（学习率、动量等）** 的情况下继续训练。
+
+如果你只是想基于权重重新训练（相当于“迁移学习”），可以用：
+
+```
+model = YOLO("runs/detect/train/weights/best.pt")
+model.train(data="datasets/mydata/dataset.yaml", epochs=20, imgsz=640, batch=16)
+```
+
+这种情况会重设优化器，但保留模型参数。
