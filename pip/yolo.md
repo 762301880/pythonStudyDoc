@@ -21,7 +21,9 @@ pip install ultralytics
 
 **口罩数据集下载**
 
-> [down](https://universe.roboflow.com/laptrinhcsc-gvk8t/mask-9xaf0/dataset/1)
+> [down](https://universe.roboflow.com/laptrinhcsc-gvk8t/mask-9xaf0/dataset/1)     
+>
+> [我的训练集下载-训练了50次]()
 
 在你的数据集根目录下，新建一个 `data.yaml` 文件，内容大概这样：
 
@@ -142,6 +144,18 @@ else:
 >  在菜单栏中选择“修改 > 笔记本设置”，将硬件加速器改为 GPU。 重新连接后执行代码。
 
 ![image-20250903161232849](https://gitee.com/yaolliuyang/blogImages/raw/master/blogImages/image-20250903161232849.png)
+
+
+
+**GPU训练返回**
+
+> **补充一下GPU真他妈快**
+>
+>  “`GPU_mem`” 列的数值（如`2.54G`、`2.71G`、`2.73G`等）可以看出，**GPU 已经在被使用了**。
+>
+> “`GPU_mem`” 这一列显示的是当前训练过程中 GPU 的内存使用量，有具体的数值就说明 GPU 正在为模型训练任务分配和使用内存资源，参与到了 YOLOv8 的训练计算中。
+
+![image-20250903162130924](https://gitee.com/yaolliuyang/blogImages/raw/master/blogImages/image-20250903162130924.png)
 
 ###    YOLOv8 Colab 训练（定期保存权重）
 
