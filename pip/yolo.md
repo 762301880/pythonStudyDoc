@@ -76,6 +76,63 @@ img = "test.jpg"  # 测试图片路径
 results = model(img, show=True)  # show=True 会弹窗显示
 ```
 
+
+
+# 本地训练
+
+##  代码中训练
+
+> 下载的数据集已经解压
+
+```python
+# =========================================================
+# 1. 导入库
+# =========================================================
+from ultralytics import YOLO
+import os
+
+# =========================================================
+# 2. 数据集路径
+# =========================================================
+yaml_path = r"C:\Users\铺先生技术研发中心\Downloads\mask.v1i.yolov8\data.yaml"  # 修改为你本地路径
+
+if not os.path.exists(yaml_path):
+    raise FileNotFoundError(f"❌ dataset.yaml 没找到: {yaml_path}")
+print("✅ 找到数据集配置文件:", yaml_path)
+
+# =========================================================
+# 3. 设置模型保存目录（Windows路径）
+# =========================================================
+save_dir = r"C:\Users\铺先生技术研发中心\Downloads\mask.v1i.yolov8\yolo_weights"
+os.makedirs(save_dir, exist_ok=True)  # 不存在则创建
+
+# =========================================================
+# 4. 开始训练
+# =========================================================
+model = YOLO("yolov8n.pt")  # 使用 nano 模型
+model.train(
+    data=yaml_path,
+    epochs=50,
+    imgsz=640,
+    batch=16,
+    save_period=5,
+    project=save_dir,      # 保存训练结果目录
+    name="train"           # 子目录名，会生成 save_dir\train\weights
+)
+
+# =========================================================
+# 5. 保存 best.pt 到指定路径
+# =========================================================
+best_model_path = os.path.join(save_dir, "train", "weights", "best.pt")
+if os.path.exists(best_model_path):
+    print(f"✅ 训练完成，best.pt 在: {best_model_path}")
+else:
+    print("❌ 没找到 best.pt，请检查训练是否正常结束！")
+
+```
+
+
+
 #  云训练模型
 
 ## [Colab](https://colab.research.google.com/?utm_source=chatgpt.com#scrollTo=C1hZOXhYMH63)
