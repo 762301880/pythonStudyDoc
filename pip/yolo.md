@@ -137,6 +137,12 @@ else:
 
 ## [Colab](https://colab.research.google.com/?utm_source=chatgpt.com#scrollTo=C1hZOXhYMH63)
 
+**修改gpu加速**
+
+>  在菜单栏中选择“修改 > 笔记本设置”，将硬件加速器改为 GPU。 重新连接后执行代码。
+
+![image-20250903161232849](https://gitee.com/yaolliuyang/blogImages/raw/master/blogImages/image-20250903161232849.png)
+
 ###    YOLOv8 Colab 训练（定期保存权重）
 
 ```shell
