@@ -286,3 +286,6 @@ pip3 install labelImg
 C:\Users\铺先生技术研发中心>labelImg
 ```
 
+#  数据集收集
+
+> 蚊子 https://datasetninja.com/mosquito-alert-2023#download
