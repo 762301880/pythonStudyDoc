@@ -21,7 +21,7 @@ pip install ultralytics
 
 **口罩数据集下载**
 
-> [down](https://universe.roboflow.com/laptrinhcsc-gvk8t/mask-9xaf0/dataset/1)     
+> [down](https://universe.roboflow.com/laptrinhcsc-gvk8t/mask-9xaf0)     
 >
 > [我的训练集下载-训练了50次]()
 
@@ -269,3 +269,20 @@ model.train(data="datasets/mydata/dataset.yaml", epochs=20, imgsz=640, batch=16)
 ```
 
 这种情况会重设优化器，但保留模型参数。
+
+# 标记数据工具
+
+## labelImg
+
+**安装**
+
+```python
+pip3 install labelImg
+```
+
+**启动**
+
+```shell
+C:\Users\铺先生技术研发中心>labelImg
+```
+
