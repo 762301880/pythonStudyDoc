@@ -289,3 +289,11 @@ C:\Users\铺先生技术研发中心>labelImg
 #  数据集收集
 
 > 蚊子 https://datasetninja.com/mosquito-alert-2023#download
+
+# 电脑没有摄像头如何解决
+
+##  [IP Webcam](https://play.google.com/store/apps/details?id=com.pas.webcam)
+
+> [网络博客](https://blog.csdn.net/weixin_40959890/article/details/114527379)  
+
+![image](https://play-lh.googleusercontent.com/Nz6jdaP_-sz7ci_jng-p-vmpgX4BdMGPOXvcQ9CSJvngTaFTwR8LQnL0rhnL7FNFu40=w2560-h1440-rw)
