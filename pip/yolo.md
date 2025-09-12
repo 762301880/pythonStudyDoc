@@ -3,6 +3,7 @@
 | 名称            | 地址                                                         |
 | --------------- | ------------------------------------------------------------ |
 | yolo-v8中文文档 | [link](https://docs.ultralytics.com/zh/models/yolov8/#performance-metrics) |
+| 百度云训练平台  | [link](https://ai.baidu.com/easydl/)                         |
 |                 |                                                              |
 
 
@@ -22,6 +23,8 @@ pip install ultralytics
 **口罩数据集下载**
 
 > [down](https://universe.roboflow.com/laptrinhcsc-gvk8t/mask-9xaf0)     
+>
+> https://universe.roboflow.com/
 >
 > [我的训练集下载-训练了50次]()
 
@@ -297,3 +300,9 @@ C:\Users\铺先生技术研发中心>labelImg
 > [网络博客](https://blog.csdn.net/weixin_40959890/article/details/114527379)  
 
 ![image](https://play-lh.googleusercontent.com/Nz6jdaP_-sz7ci_jng-p-vmpgX4BdMGPOXvcQ9CSJvngTaFTwR8LQnL0rhnL7FNFu40=w2560-h1440-rw)
+
+# 数据集标记工具
+
+## [https://www.makesense.ai/](https://www.makesense.ai/)  
+
+>   https://mp.weixin.qq.com/s/tP0aE7NfyM-B-Hij29rV_g
