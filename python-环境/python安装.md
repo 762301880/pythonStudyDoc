@@ -2,10 +2,12 @@
 
 ## 资料
 
-| 名称                | 地址                                                        |
-| ------------------- | ----------------------------------------------------------- |
-| 菜鸟教程-python安装 | [link](https://www.runoob.com/python3/python3-install.html) |
-|                     |                                                             |
+| 名称                     | 地址                                                         |
+| ------------------------ | ------------------------------------------------------------ |
+| 菜鸟教程-python安装      | [link](https://www.runoob.com/python3/python3-install.html)  |
+| 清华大学python镜像站     | [link](https://mirrors.tuna.tsinghua.edu.cn/python/3.13.14/) |
+| 中国科技大学python镜像站 | [link](https://mirrors.ustc.edu.cn/python/)                  |
+| 阿里云python镜像站       | [link](https://developer.aliyun.com/mirror/python-release?spm=a2c6h.13651102.0.0.353e1b11yLWBBe) |
 
 ## 安装
 
@@ -13,52 +15,53 @@
 
 <img src="https://gitee.com/yaolliuyang/blogImages/raw/master/blogImages/bw58NDtmzaZyKVj.png" alt="1636944911(1).jpg" style="zoom:50%;" />
 
-推荐[淘宝镜像npm](https://npm.taobao.org/mirrors)下载 
+### 安装linux依赖
 
-```shell
-# 地址
-https://npm.taobao.org/mirrors/python/
+> 编译安装依赖 **OpenSSL ** 扩展
+
+```bash
+# CentOS/RHEL
+yum install openssl-devel -y
+# Debian/Ubuntu
+apt install libssl-dev -y
 ```
 
 
 
-- 下载
+### 下载安装包
 
 ```shell
 # wget 下载
-wget https://npm.taobao.org/mirrors/python/3.9.8/Python-3.9.8.tgz
+wget https://mirrors.tuna.tsinghua.edu.cn/python/3.13.14/Python-3.13.14.tgz
 # curl 下载
-curl -o Python-3.9.8.tgz   https://npm.taobao.org/mirrors/python/3.9.8/Python-3.9.8.tgz
+curl -o Python-3.13.14.tgz   https://mirrors.tuna.tsinghua.edu.cn/python/3.13.14/Python-3.13.14.tgz
 # 为了方便
 ```
 
-- [安装](https://www.cnblogs.com/smilevv/p/14134901.html)
+### 编译安装
 
 ```shell
-tar -zxvf Python-3.9.8.tgz
-cd Python-3.9.8
-./configure   --prefix=/usr/local/python3.9
+tar -zxvf Python-3.13.14.tgz
+cd Python-3.13.14
+./configure   --prefix=/usr/local/python3.13.14
 make && sudo make install
 ```
 
-查看是否安装成功
+### 查看是否安装成功
 
 ```shell
 pip --version
 # 如果没有指定目录的时候 默认安装目录
-[root@iZuf69knglysgxpotcmkn1Z python3.9]# pwd
-/usr/local/lib/python3.9
+[root@iZuf69knglysgxpotcmkn1Z python3.13.14]# pwd
+/usr/local/lib/python3.13.14
 # 全局使用python3命令
 [root@iZuf69knglysgxpotcmkn1Z]# python3 --version      
-Python 3.9.8
+Python 3.13.14
 # 查看pip 
 [root@101fe8e80378 /]# pip3 --version
-pip 21.2.4 from /usr/local/lib/python3.9/site-packages/pip (python 3.9)
 ```
 
-
-
-## 卸载
+### 卸载
 
 **编译安装卸载**
 
@@ -80,7 +83,7 @@ sudo rm -rf  /usr/local/python
 
 
 
-# windows安装
+# [windows安装](https://mirrors.tuna.tsinghua.edu.cn/python/3.13.14/python-3.13.14-amd64.exe)
 
 >点击`Downloads`=>`Windows`
 
