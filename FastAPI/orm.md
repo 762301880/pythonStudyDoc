@@ -1,0 +1,1 @@
+[官方文档](https://fastapi.tiangolo.com/zh/tutorial/sql-databases/#create-the-app-with-a-single-model)

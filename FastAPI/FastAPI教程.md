@@ -2,6 +2,8 @@
 
 [菜鸟教程`FastAPI`文档](https://www.runoob.com/fastapi/fastapi-tutorial.html)
 
+[fastapi中文文档](https://fastapi.tiangolo.com/zh/)
+
 ## FastAPI 特点
 
 FastAPI 之所以在 Python Web 框架中脱颖而出，主要得益于以下特点：
